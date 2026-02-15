@@ -95,7 +95,7 @@ export default function TemplateFillPage() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "#000",
+        background: "#fff",
         overflow: "hidden",
         }}
     >
@@ -104,7 +104,7 @@ export default function TemplateFillPage() {
             position: "relative",
             width: "100vw", // ✅ 100vh → 100dvh
             height: `calc(100vw / ${R})`, // ✅ 100vh → 100dvh
-            background: "#000",
+            background: "#fff",
         }}
         >
         <img
@@ -498,7 +498,7 @@ export default function TemplateFillPage() {
         <div
         style={{
             position: "absolute",
-            bottom: "6%",
+            bottom: "3%",
             left: "50%",
             transform: "translateX(-50%)",
             zIndex: 20,
