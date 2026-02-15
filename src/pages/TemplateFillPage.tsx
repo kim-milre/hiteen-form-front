@@ -102,8 +102,8 @@ export default function TemplateFillPage() {
         <div
         style={{
             position: "relative",
-            width: `min(100vw, calc(100dvh * ${R}))`, // ✅ 100vh → 100dvh
-            height: `min(100dvh, calc(100vw / ${R}))`, // ✅ 100vh → 100dvh
+            width: "100vw", // ✅ 100vh → 100dvh
+            height: `calc(100vw / ${R})`, // ✅ 100vh → 100dvh
             background: "#000",
         }}
         >
