@@ -187,7 +187,7 @@ export default function TemplateFillPage() {
                 whiteSpace: "nowrap",
                 width: "max-content",
                 display: "inline-block",
-                fontSize: "70px",
+                fontSize: clampScaled(20, 1.5, 30),
                 fontWeight: 800,
                 color: "#fff",
                 WebkitTextStroke: "1px #000000",
