@@ -88,22 +88,25 @@ export default function TemplateFillPage() {
 
   return (
     <div
-      style={{
+        style={{
         position: "fixed",
         inset: 0,
-        display: "grid",
-        placeItems: "center",
+        height: "100dvh", // ✅ iOS Safari 대응
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         background: "#000",
-      }}
-    >
-      <div
-        style={{
-          position: "relative",
-          width: `min(100vw, calc(100vh * ${R}))`,
-          height: `min(100vh, calc(100vw / ${R}))`,
-          background: "#000",
+        overflow: "hidden",
         }}
-      >
+    >
+        <div
+        style={{
+            position: "relative",
+            width: `min(100vw, calc(100dvh * ${R}))`, // ✅ 100vh → 100dvh
+            height: `min(100dvh, calc(100vw / ${R}))`, // ✅ 100vh → 100dvh
+            background: "#000",
+        }}
+        >
         <img
           src="/template.jpg"
           alt="template"
