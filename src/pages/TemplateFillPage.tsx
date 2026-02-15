@@ -210,8 +210,8 @@ export default function TemplateFillPage() {
                 pointerEvents: "none"
             }}
             >
-            회비 납부 계좌:
-            토스뱅크 1002-4057-0414 (김민성)
+            🍓 회비 납부 계좌<br />
+            토스뱅크 1002-4057-0414<br />(김민성)
             </div>
 
         <div
@@ -264,7 +264,7 @@ export default function TemplateFillPage() {
                 height: `${interestSpot.h}%`,
                 zIndex: 11,
                 pointerEvents: "none",
-                color: values.interest.length > 0 ? "#000" : "rgba(0,0,0,0.6)",
+                color: values.interest.length > 0 ? "#000" : "rgba(0,0,0,0.45)",
                 fontSize: clampScaled(10, 1.5, 16),
                 padding: "0 8px",
                 display: "flex",
