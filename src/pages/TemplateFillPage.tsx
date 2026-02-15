@@ -87,7 +87,9 @@ export default function TemplateFillPage() {
   const paymentSpot = hotspots.find(h => h.key === "paymentStatus")
 
   return (
+    
     <div
+    
         style={{
         position: "fixed",
         inset: 0,
@@ -175,6 +177,63 @@ export default function TemplateFillPage() {
                 </div>
                 )
             })}
+
+        <div
+            style={{
+                position: "absolute",
+                top: "16.5%",    
+                left: "50%",     
+                transform: "translate(-50%, -50%)",
+                whiteSpace: "nowrap",
+                width: "max-content",
+                display: "inline-block",
+                fontSize: "70px",
+                fontWeight: 800,
+                color: "#fff",
+                WebkitTextStroke: "1px #000000",
+                textShadow: "0 0 4px rgba(0,0,0,0.5)",
+                pointerEvents: "none"
+            }}
+            >
+            "Amicom" 동아리 신청서
+            </div>
+
+        <div
+            style={{
+                position: "absolute",
+                top: "40%",    
+                left: "82%",     
+                transform: "translate(-50%, -50%)",
+                fontSize: clampScaled(10, 1.5, 16),
+                fontWeight: 50,
+                color: "#000",
+                pointerEvents: "none"
+            }}
+            >
+            회비 납부 계좌:
+            토스뱅크 1002-4057-0414 (김민성)
+            </div>
+
+        <div
+            style={{
+                position: "absolute",
+                top: "60%",    
+                left: "45%",     
+                transform: "translate(-50%, -50%)",
+                fontSize: clampScaled(20, 1.5, 25),
+                fontWeight: 50,
+                color: "#000",
+                pointerEvents: "none"
+            }}
+            >
+            아미콤이 궁금해요 !<br />
+            <br />
+            아미콤은 ~<br />
+            회비 : 15,000원<br />
+            개강 총회 : 2026년 3월 11일 수요일 저녁 6시<br />
+            자세한 사항은 노션 참조<br />
+            https://www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0
+            </div>
 
         {/* 관심분야 표시 텍스트: 메인 화면 스케일 적용 */}
         {interestSpot && (
