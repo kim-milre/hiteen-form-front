@@ -218,9 +218,8 @@ export default function TemplateFillPage() {
             style={{
                 position: "absolute",
                 top: "60%",    
-                left: "45%",     
-                transform: "translate(-50%, -50%)",
-                fontSize: clampScaled(20, 1.5, 25),
+                left: "45%",
+                fontSize: clampScaled(10, 1.5, 18),
                 fontWeight: 50,
                 color: "#000",
                 pointerEvents: "none"
