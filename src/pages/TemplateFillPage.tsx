@@ -226,11 +226,10 @@ export default function TemplateFillPage() {
                 pointerEvents: "none"
             }}
             >
-            아미콤이 궁금해요 !<br />
-            <br />
+            🍰 아미콤이 궁금해요 !<br />
             아미콤은 ~<br />
-            회비 : 15,000원<br />
-            개강 총회 : 2026년 3월 11일 수요일 저녁 6시<br />
+            🍓 회비 : 15,000원<br />
+            🍓 개강 총회 : 3월 11일 (수요일) 저녁 6시<br />
             자세한 사항은 노션 참조<br />
             https://www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0
             </div>
