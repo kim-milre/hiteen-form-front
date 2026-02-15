@@ -220,6 +220,7 @@ export default function TemplateFillPage() {
                 top: "60%",    
                 left: "45%",
                 fontSize: clampScaled(10, 1.5, 18),
+                transform: "translate(-50%, -50%)",
                 fontWeight: 50,
                 color: "#000",
                 pointerEvents: "none"
