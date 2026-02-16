@@ -195,7 +195,7 @@ export default function TemplateFillPage() {
             height: "100%",
             objectFit: "fill",
             userSelect: "none",
-            pointerEvents: "none",
+            pointerEvents: "auto",
           }}
         />
 
@@ -280,7 +280,7 @@ export default function TemplateFillPage() {
                 top: "40%",    
                 left: "82%",     
                 transform: "translate(-50%, -50%)",
-                fontSize: clampScaled(10, 1.5, 16),
+                fontSize: clampScaled(8, 1.5, 10),
                 fontWeight: 50,
                 color: "#000",
                 pointerEvents: "none"
@@ -324,9 +324,9 @@ export default function TemplateFillPage() {
                 "🍓 회비: 15,000원",
                 "🍓 개강 총회: 3월 11일 수요일 저녁 6시",
                 "자세한 사항은 노션 참조",
-                "www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0",
                 ].join("\n")
             }
+            
             minPx={8}
             maxPx={13}
             lineHeight={1.3}
@@ -342,6 +342,37 @@ export default function TemplateFillPage() {
                 textAlign: "left",   // 가운데 정렬이 싫으면 left
             }}
             />
+            <a
+            href="https://www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                position: "absolute",
+                left: "50%",
+                top: "64.8%",
+                transform: "translateX(-50%)",
+                zIndex: 30,
+
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 8,
+
+                padding: "2px 4px",
+                borderRadius: 6,
+                background: "rgb(254, 103, 128)",
+                color: "#fff",
+                textDecoration: "none",
+
+                fontSize: clampScaled(8, 1.4, 10),
+                fontWeight: 600,
+
+
+                pointerEvents: "auto",
+            }}
+            >
+            노션에서 자세히 보기 ↗
+            </a>
             
 
         {/* 관심분야 표시 텍스트: 메인 화면 스케일 적용 */}
