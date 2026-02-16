@@ -278,10 +278,10 @@ export default function TemplateFillPage() {
             style={{
                 position: "absolute",
                 top: "40%",    
-                left: "82%",     
+                left: "80%",     
                 transform: "translate(-50%, -50%)",
                 fontSize: clampScaled(10, 1.5, 13),
-                fontWeight: 50,
+                fontWeight: 60,
                 color: "#000",
                 pointerEvents: "none"
             }}
@@ -294,7 +294,7 @@ export default function TemplateFillPage() {
         style={{
             position: "absolute",
             left: "18%",
-            top: "52%",          // AutoFitText보다 살짝 위
+            top: "51%",          // AutoFitText보다 살짝 위
             width: "54%",
             textAlign: "left",
             fontSize: clampScaled(13, 2.2, 15),  // 🔥 여기서 키움
@@ -328,7 +328,7 @@ export default function TemplateFillPage() {
             style={{
                 position: "absolute",
                 left: "14%",
-                top: "54%",
+                top: "53%",
                 width: "68%",
                 height: "15%",
                 color: "#000",
