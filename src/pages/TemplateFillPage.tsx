@@ -274,7 +274,7 @@ export default function TemplateFillPage() {
             "Amicom" 동아리 신청서
             </div>
 
-        <div
+        {/* <div
             style={{
                 position: "absolute",
                 top: "40%",    
@@ -294,7 +294,7 @@ export default function TemplateFillPage() {
         style={{
             position: "absolute",
             left: "18%",
-            top: "51%",          // AutoFitText보다 살짝 위
+            top: "50%",          // AutoFitText보다 살짝 위
             width: "54%",
             textAlign: "left",
             fontSize: clampScaled(13, 2.2, 15),  // 🔥 여기서 키움
@@ -311,14 +311,12 @@ export default function TemplateFillPage() {
             text={
                 [
                 "아미콤은 AI 시대에 1인 창업을 실전으로 배우는 IT & 창업 동아리입니다",
-                "",
-                "올해 주요 계획",
                 "1. 퍼스널 브랜딩 수익화 스터디",
                 "2. 바이브 코딩 1인 창업 스터디",
                 "3. 연사 초청",
+                "",
                 "🍓 회비: 15,000원",
                 "🍓 개강 총회: 3월 11일 수요일 저녁 6시",
-                "자세한 사항은 노션 참조",
                 ].join("\n")
             }
             
@@ -328,7 +326,7 @@ export default function TemplateFillPage() {
             style={{
                 position: "absolute",
                 left: "14%",
-                top: "53%",
+                top: "52%",
                 width: "68%",
                 height: "15%",
                 color: "#000",
@@ -336,15 +334,15 @@ export default function TemplateFillPage() {
                 padding: "6px 8px",
                 textAlign: "left",   // 가운데 정렬이 싫으면 left
             }}
-            />
+            /> */}
             <a
             href="https://www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0"
             target="_blank"
             rel="noopener noreferrer"
             style={{
                 position: "absolute",
-                left: "50%",
-                top: "64%",
+                left: "55%",
+                top: "61.5%",
                 transform: "translateX(-50%)",
                 zIndex: 30,
 
