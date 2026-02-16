@@ -1,7 +1,83 @@
-import { useEffect, useMemo, useRef, useState } from "react"
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
+
 
 type FieldKey = "studentId" | "name" | "major" | "number"
 type HotspotKey = FieldKey | "interest" | "paymentStatus"
+
+type AutoFitTextProps = {
+  text: React.ReactNode
+  minPx?: number
+  maxPx?: number
+  lineHeight?: number
+  style?: React.CSSProperties
+}
+
+function AutoFitText({
+  text,
+  minPx = 12,
+  maxPx = 24,
+  lineHeight = 1.25,
+  style,
+}: AutoFitTextProps) {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const [fontPx, setFontPx] = useState(maxPx)
+
+  const fit = () => {
+    const el = ref.current
+    if (!el) return
+
+    let lo = minPx
+    let hi = maxPx
+    let best = minPx
+
+    while (lo <= hi) {
+      const mid = Math.floor((lo + hi) / 2)
+      el.style.fontSize = `${mid}px`
+      el.style.lineHeight = String(lineHeight)
+
+      // 세로만 기준으로 맞추는 게 핵심
+      // 가로는 줄바꿈으로 해결하게 한다
+      const fits = el.scrollHeight <= el.clientHeight
+
+      if (fits) {
+        best = mid
+        lo = mid + 1
+      } else {
+        hi = mid - 1
+      }
+    }
+
+    setFontPx(best)
+  }
+
+  useLayoutEffect(() => {
+    fit()
+  }, [text, minPx, maxPx, lineHeight])
+
+  useEffect(() => {
+    const onResize = () => fit()
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        ...style,
+        fontSize: `${fontPx}px`,
+        lineHeight,
+        whiteSpace: "pre-line",        // 빈칸 줄바꿈 문제 줄임
+        wordBreak: "break-word",       // 긴 단어 줄바꿈
+        // overflowWrap: "anywhere",      // URL도 줄바꿈
+        boxSizing: "border-box",
+        overflow: "hidden",
+      }}
+    >
+      {text}
+    </div>
+  )
+}
 
 type Hotspot = {
   key: HotspotKey
@@ -214,7 +290,7 @@ export default function TemplateFillPage() {
             토스뱅크 1002-4057-0414<br />(김민성)
             </div>
 
-        <div
+        {/* <div
             style={{
                 position: "absolute",
                 top: "60%",    
@@ -227,12 +303,46 @@ export default function TemplateFillPage() {
             }}
             >
             🍰 아미콤이 궁금해요 !<br />
-            아미콤은 ~<br />
+            아미콤은 AI 시대에 1인 창업을 실전으로 배우는 IT & 창업 동아리입니다<br />
+            올해 주요 계획 : 1. 퍼스널 브랜딩 수익화 스터디 2. 바이브 코딩 1인 창업 스터디 3. 연사 초청<br />
             🍓 회비 : 15,000원<br />
             🍓 개강 총회 : 3월 11일 (수요일) 저녁 6시<br />
             자세한 사항은 노션 참조<br />
             https://www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0
-            </div>
+            </div> */}
+        
+        <AutoFitText
+            text={
+                [
+                "🍰 아미콤이 궁금해요 !",
+                "아미콤은 AI 시대에 1인 창업을 실전으로 배우는 IT & 창업 동아리입니다",
+                "",
+                "올해 주요 계획",
+                "1. 퍼스널 브랜딩 수익화 스터디",
+                "2. 바이브 코딩 1인 창업 스터디",
+                "3. 연사 초청",
+                "🍓 회비: 15,000원",
+                "🍓 개강 총회: 3월 11일 수요일 저녁 6시",
+                "자세한 사항은 노션 참조",
+                "www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0",
+                ].join("\n")
+            }
+            minPx={8}
+            maxPx={13}
+            lineHeight={1.3}
+            style={{
+                position: "absolute",
+                left: "14%",
+                top: "52%",
+                width: "68%",
+                height: "15%",
+                color: "#000",
+                pointerEvents: "none",
+                padding: "6px 8px",
+                textAlign: "left",   // 가운데 정렬이 싫으면 left
+            }}
+            />
+            
 
         {/* 관심분야 표시 텍스트: 메인 화면 스케일 적용 */}
         {interestSpot && (
