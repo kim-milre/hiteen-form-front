@@ -263,7 +263,7 @@ export default function TemplateFillPage() {
                 whiteSpace: "nowrap",
                 width: "max-content",
                 display: "inline-block",
-                fontSize: clampScaled(20, 1.5, 30),
+                fontSize: clampScaled(25, 1.5, 30),
                 fontWeight: 800,
                 color: "#fff",
                 WebkitTextStroke: "1px #000000",
@@ -280,7 +280,7 @@ export default function TemplateFillPage() {
                 top: "40%",    
                 left: "82%",     
                 transform: "translate(-50%, -50%)",
-                fontSize: clampScaled(8, 1.5, 10),
+                fontSize: clampScaled(10, 1.5, 13),
                 fontWeight: 50,
                 color: "#000",
                 pointerEvents: "none"
@@ -290,31 +290,26 @@ export default function TemplateFillPage() {
             토스뱅크 1002-4057-0414<br />(김민성)
             </div>
 
-        {/* <div
-            style={{
-                position: "absolute",
-                top: "60%",    
-                left: "45%",
-                fontSize: clampScaled(10, 1.5, 18),
-                transform: "translate(-50%, -50%)",
-                fontWeight: 50,
-                color: "#000",
-                pointerEvents: "none"
-            }}
-            >
-            🍰 아미콤이 궁금해요 !<br />
-            아미콤은 AI 시대에 1인 창업을 실전으로 배우는 IT & 창업 동아리입니다<br />
-            올해 주요 계획 : 1. 퍼스널 브랜딩 수익화 스터디 2. 바이브 코딩 1인 창업 스터디 3. 연사 초청<br />
-            🍓 회비 : 15,000원<br />
-            🍓 개강 총회 : 3월 11일 (수요일) 저녁 6시<br />
-            자세한 사항은 노션 참조<br />
-            https://www.notion.so/amicom/Amicom-9c3a1b405d0b4c8e8cbbacfa7a1e7c0
-            </div> */}
+        <div
+        style={{
+            position: "absolute",
+            left: "18%",
+            top: "52%",          // AutoFitText보다 살짝 위
+            width: "54%",
+            textAlign: "left",
+            fontSize: clampScaled(13, 2.2, 15),  // 🔥 여기서 키움
+            fontWeight: 800,
+            color: "#000",
+            pointerEvents: "none",
+        }}
+        >
+        🍰 아미콤이 궁금해요 !
+        </div>
+
         
         <AutoFitText
             text={
                 [
-                "🍰 아미콤이 궁금해요 !",
                 "아미콤은 AI 시대에 1인 창업을 실전으로 배우는 IT & 창업 동아리입니다",
                 "",
                 "올해 주요 계획",
@@ -327,13 +322,13 @@ export default function TemplateFillPage() {
                 ].join("\n")
             }
             
-            minPx={8}
-            maxPx={13}
-            lineHeight={1.3}
+            minPx={10}
+            maxPx={15}
+            lineHeight={1}
             style={{
                 position: "absolute",
                 left: "14%",
-                top: "52%",
+                top: "54%",
                 width: "68%",
                 height: "15%",
                 color: "#000",
@@ -349,7 +344,7 @@ export default function TemplateFillPage() {
             style={{
                 position: "absolute",
                 left: "50%",
-                top: "64.8%",
+                top: "64%",
                 transform: "translateX(-50%)",
                 zIndex: 30,
 
@@ -371,7 +366,7 @@ export default function TemplateFillPage() {
                 pointerEvents: "auto",
             }}
             >
-            노션에서 자세히 보기 ↗
+            노션에서 자세히 보기 ➚
             </a>
             
 
